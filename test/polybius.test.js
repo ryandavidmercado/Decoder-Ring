@@ -7,6 +7,17 @@ describe("polybius()", () => {
     it("should encode i/j to 42", () => {
       expect(polybius("ij")).to.equal("4242");
     });
+    it("should properly encode the entire alphabet", () => {
+      expect(polybius("abcdefghijklmnopqrstuvwxyz"))
+        .to
+        .equal("1121314151122232424252132333435314243444541525354555");
+    });
+    it("should properly decode the entire alphabet", () => {
+      expect(polybius("1121314151122232424252132333435314243444541525354555"
+      , false))
+        .to
+        .equal("abcdefgh(i/j)(i/j)klmnopqrstuvwxyz");
+    });
     it("should ignore capital letters", () => {
       expect(polybius("HELLO")).to.equal(polybius("hello"));
     });
