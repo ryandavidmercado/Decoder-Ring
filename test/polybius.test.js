@@ -28,5 +28,8 @@ describe("polybius()", () => {
     it("should return false when provided an invalid cipher for decryption", () => {
       expect(polybius("273255", false)).to.be.false;
     });
+    it("should return false if the input string for encoding contains any numbers", () => {
+      expect(polybius("234")).to.be.false;
+    });
   });
 });

@@ -73,6 +73,7 @@ const polybiusModule = (function () {
 
   function encoder(input, alphabetMap) {
     let output = "";
+    if (/\d/.test(input)) return false;
     for (let i = 0; i < input.length; i++) {
       const charCode = charCoderLowerCase(input[i]);
       // we re-get the char because charCoderLowerCase automatically converts uppercase chars to lowercase ones
