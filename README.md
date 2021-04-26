@@ -22,7 +22,7 @@ Built to demonstrate use of several key development practices:
 Building the application with a tests-first workflow demonstrated the benefits of validating code against unit tests. While naive implementations of the ciphers provided seemingly correct results, the comprehensive suite of unit tests quickly demonstrated these implementations' failure to account for many edge cases, including invalid inputs for messages and cipher parameters. This workflow enabled rapid iteration of the implementations, ensuring a consistent user experience.
 
 ## Tech Stack
-* HTML/CSS/JS
-* Mocha
-* Chai
-* Bootstrap
+* HTML/CSS/JS: Base stack.
+* Mocha: JS test framework that established the environment for validating cipher implementations.
+* Chai: TDD assertion library that enabled semantic, rapidly-iterable testing.
+* Bootstrap: Provided rapid iteration of the GUI and a clean, modern appearance.
